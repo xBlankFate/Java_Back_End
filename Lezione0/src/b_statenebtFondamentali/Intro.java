@@ -4,20 +4,20 @@ public class Intro {
 	
 public static void main(String[] args) {
 	
-//	//fintanto che la condizione è valida, tu esegui
-//	int n=5;
-//	int numeroGiri=0;
-//	while(n==5) {
-//		numeroGiri++;
-//		System.out.println("giro"+numeroGiri);
-//		double numCasuale=Math.random();
-//		
-//		System.out.println("il numero casuale è "+numCasuale);
-//		if (numCasuale<0.2) {
-//			n=7;
-//			System.out.println("qui termina il while");
-//		}
-//	}
+	//fintanto che la condizione è valida, tu esegui
+	int n=5;
+	int numeroGiri=0;
+	while(n==5) {
+		numeroGiri++;
+		System.out.println("giro"+numeroGiri);
+		double numCasuale=Math.random();
+		
+		System.out.println("il numero casuale è "+numCasuale);
+		if (numCasuale<0.2) {
+			n=7;
+			System.out.println("qui termina il while");
+		}
+	}
 		
 	int numGiri=0;
 	int giriPersi=0;
