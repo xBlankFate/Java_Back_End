@@ -6,6 +6,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Oggetti {
 
@@ -147,6 +149,35 @@ public class Oggetti {
 		
 		System.out.println(nomi);
 		
+		boolean vuoto=nomi.isEmpty();
+		//////////////////////////////////////
+		System.out.println(vuoto);
+		
+		Scanner s=new Scanner(System.in);
+		
+		Random r=new Random();
+		
+		Integer numeriPop=0;
+		
+		System.out.println("gioco del lotto quanti numeri vuoi estrarre?");
+		
+		ArrayList <Integer> numeri=new ArrayList<>();
+		
+		for(int i=0;i<90;i++) {
+			numeriPop++;
+			numeri.add(numeriPop);
+		}
+		int num=s.nextInt();
+		
+		int Casuale=0;
+		
+		for(int j=0;j<num;j++) {
+			Casuale=r.nextInt(90);
+			if(numeri.contains(num)) {
+			System.out.println(Casuale);
+			}
+			
+		}
 		
 		
 		
@@ -169,6 +200,17 @@ public class Oggetti {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+	}
+
+	private static char[] numeroCas(int j) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
