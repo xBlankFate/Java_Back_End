@@ -55,7 +55,6 @@ public class ProvaJukeBox {
 				output.println(cantante);
 			}
 		output.close();
-	
 	}
 
 }
