@@ -51,7 +51,8 @@ public class libro implements Comparable<libro> {
 		
 		//return this.titolo.compareTo(altroLibro.titolo);
 		//return this.numPagine - altroLibro.numPagine;
-		return Double.compare(this.prezzo, altroLibro.prezzo); 
+		return Double.compare(this.prezzo, altroLibro.prezzo);
+		
 	}
 	
 	
