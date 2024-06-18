@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>QUIZ</title>
+<style>
+#sx{width:200px,border-right 1px solid red};
+#dx{width:600px,padding-left 10px solid red};
+</style>
+</head>
+<body>
+
+<h1>QUIZ</h1>
+
+	<div id="sx">
+		<ul id="regioni"></ul>
+	</div>
+	
+	<div id="dx">
+		<ul id="paesi"></ul>
+	</div>
+	
+	<script>
+		
+		const quiz=document.getElementById('quiz')
+		const regioni=document.getElementById('regioni')
+		const paesi=document.getElementById('paesi')
+		const URL_REGIONI='/api/regioni'
+		const URL_PAESI='/api/paesi'
+		const URL_QUIZ='/quiz'
+		
+		fetch (URL_QUIZ)
+			.then(res =>res.json())
+			.then(risposta =>{
+				for(const domanda of domande){
+					const LI=document.creareElement('li')
+					LI.textContent=rispostaCorretta
+					
+					LI.onclick=function(){
+						fetch(URL_QUIZ + '/'+rispostaCorretta)
+						.then(res => res.json())
+						.then(paesis => {
+							rispostaCorretta.innerHTML=''
+						})
+					}
+				}
+			})
+			
+			
+			
+		fetch (URL_REGIONI)
+			.then(res =>res.json())
+			.then(regions =>{
+				for(const regione of regions){
+					const LI=document.creareElelment('li')
+					LI.textContent=regione
+					
+					LI.onclick=function (){
+						fetch (URL_PAESI + '/'+regione)
+						.then(res => res.json())
+						.then (paesis =>{
+							paesi.innerHTML=''
+							for (const paese of paesis){
+								const LI=document.createElement('li')
+								LI.textContente=paese.name
+								paesi.append(LI)
+							}
+								
+						})
+					}
+					regioni.append(LI)
+					
+					
+				}
+			})
+			
+	
+	</script>
+
+</body>
+</html>
