@@ -49,9 +49,4 @@ public class Utente {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	
-
-	
-	
-	
 }

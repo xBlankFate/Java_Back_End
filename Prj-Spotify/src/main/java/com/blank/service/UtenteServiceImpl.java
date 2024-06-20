@@ -1,5 +1,7 @@
 package com.blank.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,10 +19,14 @@ public class UtenteServiceImpl implements UtenteService {
 		return daoUtente.save(u);
 	}
 
-//	@Override
-//	public List<Utente> getUtente() {
-//		return daoUtente.findAll();
-//	}
+	@Override
+	public List<Utente> getUtente() {
+		
+		return daoUtente.findAll();
+		
+	}
+
+
 
 	
 

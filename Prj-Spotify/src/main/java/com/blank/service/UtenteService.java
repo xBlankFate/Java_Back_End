@@ -9,9 +9,6 @@ public interface UtenteService {
 	
 	Utente addUtente(Utente u);
 	
-//	List<Utente> getUtente();
+	List<Utente> getUtente();
 	
-	
-	
-
 }

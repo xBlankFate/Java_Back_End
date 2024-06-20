@@ -18,17 +18,13 @@ public class UtenteMVC {
 	
 	@GetMapping("logInUtenti")
 	public String LogIn() {
-		return "LogIn1";
+		return "Login";
 	}
 	
-	
-	
-	
-	
-	@GetMapping("registraUtenti")
+	@GetMapping("RegistraUtenti")
 	public String addUtente(Utente u) {
 		//serviceUtente.addUtente(u);
-		return "LogIn";
+		return "RegistraUtente";
 	}
 	
 	@PostMapping("registraUtenti")

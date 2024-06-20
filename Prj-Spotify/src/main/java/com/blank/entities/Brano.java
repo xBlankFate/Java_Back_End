@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 @Table(name = "brani")
 public class Brano {
 	
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
@@ -57,8 +58,4 @@ public class Brano {
 	public void setGenere(String genere) {
 		this.genere = genere;
 	}
-	
-	
-	
-
 }
