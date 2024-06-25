@@ -1,9 +1,15 @@
 package com.blank.entities;
 
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinColumns;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,20 +19,28 @@ public class Brano {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int brano_id;
 	private String titolo;
 	private String artista;
 	private String album;
 	private double durata;
 	private String genere;
 	
+	@ManyToMany
+	@JoinTable(
+			
+	name = "braniPlaylist",
+	joinColumns = @JoinColumn(name = "playlist_id"),
+	inverseJoinColumns = @JoinColumn(name="brano_id"))
+	private Set<PlayList> braniPlaylist;
+	
 	
 	
 	public int getId() {
-		return id;
+		return brano_id;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.brano_id = id;
 	}
 	public String getTitolo() {
 		return titolo;

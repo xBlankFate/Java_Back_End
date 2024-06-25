@@ -7,7 +7,7 @@ import com.blank.entities.Brano;
 public interface BranoService {
 	
 	List<Brano> getListaBrani();
-	String getlistaByArtista(String artista);
+	Brano getlistaById(Integer brano_id);
 	String getBranoByTitolo(String titolo);
 	Brano addBrano(Brano b);
 	

@@ -1,6 +1,7 @@
 package com.blank.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +38,12 @@ public class PlayListServiceImpl implements PlayListService{
 	public PlayList getPlayListByNome(PlayList p) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Optional<PlayList> getById(Integer id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.blank.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,6 @@ public interface PlayListService {
 	PlayList getPlayListByNome(PlayList p);
 	PlayList addPlayList(PlayList p);
 	void deletePlayList(PlayList p);
+	Optional<PlayList> getById(Integer id);
 	
 }

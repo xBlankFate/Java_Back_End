@@ -29,9 +29,9 @@ public  class BranoServiceImpl implements BranoService {
 
 
 	@Override
-	public String getlistaByArtista(String artista) {
+	public Brano getlistaById(Integer brano_id) {
 		// TODO Auto-generated method stub
-		return null;
+		return daoBrano.getReferenceById(brano_id);
 	}
 
 

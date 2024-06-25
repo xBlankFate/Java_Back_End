@@ -1,5 +1,7 @@
 package com.blank.controller;
 
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blank.entities.PlayList;
+import com.blank.service.BranoService;
 import com.blank.service.PlayListService;
 
 @RestController
@@ -19,6 +22,7 @@ public class PlayListRest {
 	
 	@Autowired
 	PlayListService service;
+	BranoService serviceBrano;
 	
 	@GetMapping("/tuttePlaylist")
 	public List<PlayList> getListaPlayList(@RequestBody PlayList p){
@@ -39,5 +43,4 @@ public class PlayListRest {
 	public void deleteUnaPlaylist(@RequestBody PlayList p) {
 		 service.deletePlayList(p);
 	}
-	
 }
